@@ -1,0 +1,32 @@
+.DS_Store
+
+DerivedData/
+build/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+*.xcworkspace/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+
+.build/
+.swiftpm/xcode/package.xcworkspace/xcuserdata/
+Packages/
+!Package.resolved
+
+Logs e temporários
+*.log
+*.tmp
+
+Binaries/
+*.zip
+
+OpenCorePkg/
+OpenCore_NO_ACPI/
+OpenCore_No_ACPI/
+
+
+Arquivos temporários de editores
+*.swp
+*.swo

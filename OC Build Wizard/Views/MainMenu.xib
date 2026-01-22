@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="24506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="24506"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="OC_Build_Wizard" customModuleProvider="target">
+            <connections>
+                <outlet property="btnAcidanthera" destination="c6B-af-crw" id="Moh-bw-fT9"/>
+                <outlet property="btnBtwise" destination="ojz-q8-2Oo" id="1Bv-W7-Wgh"/>
+                <outlet property="indeterminateprogress" destination="dN6-h5-456" id="abc-t5-b8Y"/>
+                <outlet property="labelProgress" destination="ykZ-8H-RVz" id="zYw-SY-hLe"/>
+                <outlet property="myTextView" destination="ufr-8R-ayV" id="VKq-HA-AB0"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+            <items>
+                <menuItem title="OC Build Wizard" id="1Xt-HY-uBw">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="OC Build Wizard" systemMenu="apple" id="uQy-DD-JDr">
+                        <items>
+                            <menuItem title="About OC Build Wizard" id="5kV-Vb-QxS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                            <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                            <menuItem title="Services" id="NMo-om-nkz">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                            <menuItem title="Hide OC Build Wizard" keyEquivalent="h" id="Olw-nP-bQN">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="VT4-aY-XCT"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="Kd2-mp-pUS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="Dhg-Le-xox"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                            <menuItem title="Quit OC Build Wizard" keyEquivalent="q" id="4sb-4s-VLi">
+                                <connections>
+                                    <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="File" id="dMs-cI-mzQ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="File" id="bib-Uj-vzu">
+                        <items>
+                            <menuItem title="New" keyEquivalent="n" id="Was-JA-tGl">
+                                <connections>
+                                    <action selector="newDocument:" target="-1" id="4Si-XN-c54"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
+                                <connections>
+                                    <action selector="openDocument:" target="-1" id="bVn-NM-KNZ"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Open Recent" id="tXI-mr-wws">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="oas-Oc-fiZ">
+                                    <items>
+                                        <menuItem title="Clear Menu" id="vNY-rz-j42">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="clearRecentDocuments:" target="-1" id="Daa-9d-B3U"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
+                            <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
+                                <connections>
+                                    <action selector="performClose:" target="-1" id="HmO-Ls-i7Q"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Save…" keyEquivalent="s" id="pxx-59-PXV">
+                                <connections>
+                                    <action selector="saveDocument:" target="-1" id="teZ-XB-qJY"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Save As…" keyEquivalent="S" id="Bw7-FT-i3A">
+                                <connections>
+                                    <action selector="saveDocumentAs:" target="-1" id="mDf-zr-I0C"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Revert to Saved" keyEquivalent="r" id="KaW-ft-85H">
+                                <connections>
+                                    <action selector="revertDocumentToSaved:" target="-1" id="iJ3-Pv-kwq"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="aJh-i4-bef"/>
+                            <menuItem title="Page Setup…" keyEquivalent="P" id="qIS-W8-SiK">
+                                <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
+                                <connections>
+                                    <action selector="runPageLayout:" target="-1" id="Din-rz-gC5"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Print…" keyEquivalent="p" id="aTl-1u-JFS">
+                                <connections>
+                                    <action selector="print:" target="-1" id="qaZ-4w-aoO"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="aUF-d1-5bR">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
+                        <items>
+                            <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
+                                <connections>
+                                    <action selector="performMiniaturize:" target="-1" id="VwT-WD-YPe"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Zoom" id="R4o-n2-Eq4">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performZoom:" target="-1" id="DIl-cC-cCs"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
+                            <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="arrangeInFront:" target="-1" id="DRN-fu-gQh"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Help" id="wpr-3q-Mcd">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
+                        <items>
+                            <menuItem title="OC Build Wizard Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                <connections>
+                                    <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="200" y="121"/>
+        </menu>
+        <window title="OC Build Wizard" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" hasShadow="NO" releasedWhenClosed="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <rect key="contentRect" x="335" y="390" width="428" height="448"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1050"/>
+            <value key="minSize" type="size" width="428" height="448"/>
+            <value key="maxSize" type="size" width="428" height="448"/>
+            <value key="minFullScreenContentSize" type="size" width="428" height="448"/>
+            <value key="maxFullScreenContentSize" type="size" width="428" height="448"/>
+            <view key="contentView" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="428" height="448"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <visualEffectView blendingMode="behindWindow" material="underPageBackground" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="Gox-4z-2DP">
+                        <rect key="frame" x="0.0" y="0.0" width="433" height="480"/>
+                        <subviews>
+                            <textField wantsLayer="YES" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UcA-NZ-7LH">
+                                <rect key="frame" x="62" y="7" width="309" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="5BZ-nS-IiZ"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Copyright © 2024 - 2025 Mirone. All rights reserved." id="rBb-QB-eLP">
+                                    <font key="font" metaFont="cellTitle"/>
+                                    <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="UcA-NZ-7LH" firstAttribute="centerX" secondItem="Gox-4z-2DP" secondAttribute="centerX" id="7eY-AL-N6I"/>
+                            <constraint firstAttribute="bottom" secondItem="UcA-NZ-7LH" secondAttribute="bottom" constant="7" id="kMq-12-xcC"/>
+                        </constraints>
+                    </visualEffectView>
+                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ykZ-8H-RVz">
+                        <rect key="frame" x="18" y="154" width="397" height="16"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="0RS-Vf-rZJ">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button tag="1" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c6B-af-crw">
+                        <rect key="frame" x="59" y="84" width="315" height="23"/>
+                        <buttonCell key="cell" type="roundTextured" title="Build OpenCore Acidanthera" bezelStyle="texturedRounded" alignment="center" controlSize="large" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Sy0-3z-lFe">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <color key="bezelColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <connections>
+                            <action selector="buildOpenCore:" target="Voe-Tx-rLC" id="bMz-VD-84h"/>
+                        </connections>
+                    </button>
+                    <progressIndicator wantsLayer="YES" maxValue="100" indeterminate="YES" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="dN6-h5-456">
+                        <rect key="frame" x="34" y="124" width="365" height="20"/>
+                    </progressIndicator>
+                    <button tag="2" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ojz-q8-2Oo">
+                        <rect key="frame" x="59" y="40" width="315" height="23"/>
+                        <buttonCell key="cell" type="roundTextured" title="Build OpenCore Btwise" bezelStyle="texturedRounded" alignment="center" controlSize="large" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="RRu-0S-Eac">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <color key="bezelColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <connections>
+                            <action selector="buildOpenCore:" target="Voe-Tx-rLC" id="2gU-BD-lr0"/>
+                        </connections>
+                    </button>
+                    <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ar-SZ-zpk">
+                        <rect key="frame" x="17" y="186" width="396" height="242"/>
+                        <clipView key="contentView" drawsBackground="NO" id="ESF-Qp-NOM">
+                            <rect key="frame" x="0.0" y="0.0" width="396" height="242"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView wantsLayer="YES" editable="NO" drawsBackground="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="ufr-8R-ayV">
+                                    <rect key="frame" x="0.0" y="0.0" width="396" height="242"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <size key="minSize" width="396" height="242"/>
+                                    <size key="maxSize" width="403" height="10000000"/>
+                                </textView>
+                            </subviews>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="MV1-t8-w88">
+                            <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="JJO-Ta-ND6">
+                            <rect key="frame" x="379" y="0.0" width="17" height="242"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <box title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="oKe-4Y-pyk">
+                        <rect key="frame" x="17" y="186" width="396" height="242"/>
+                        <view key="contentView" id="g7i-JF-zxE">
+                            <rect key="frame" x="0.0" y="0.0" width="396" height="242"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </view>
+                    </box>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ojz-q8-2Oo" firstAttribute="leading" secondItem="c6B-af-crw" secondAttribute="leading" id="1ty-j7-cMz"/>
+                    <constraint firstItem="dN6-h5-456" firstAttribute="top" secondItem="ykZ-8H-RVz" secondAttribute="bottom" constant="10" id="3RX-od-aIE"/>
+                    <constraint firstItem="3ar-SZ-zpk" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="17" id="55h-q9-aCA"/>
+                    <constraint firstItem="ykZ-8H-RVz" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" symbolic="YES" id="Ads-iz-2zp"/>
+                    <constraint firstAttribute="bottom" secondItem="dN6-h5-456" secondAttribute="bottom" constant="124" id="D85-Qg-hrl"/>
+                    <constraint firstItem="ykZ-8H-RVz" firstAttribute="top" secondItem="oKe-4Y-pyk" secondAttribute="bottom" constant="16" id="Fhg-Ab-7ni"/>
+                    <constraint firstItem="oKe-4Y-pyk" firstAttribute="leading" secondItem="3ar-SZ-zpk" secondAttribute="leading" id="I0t-QK-jwy"/>
+                    <constraint firstAttribute="bottom" secondItem="Gox-4z-2DP" secondAttribute="bottom" id="J2p-p9-bgk"/>
+                    <constraint firstItem="3ar-SZ-zpk" firstAttribute="top" secondItem="oKe-4Y-pyk" secondAttribute="top" id="JC1-fP-RDS"/>
+                    <constraint firstItem="dN6-h5-456" firstAttribute="centerX" secondItem="c6B-af-crw" secondAttribute="centerX" id="JJ4-hD-EQO"/>
+                    <constraint firstItem="Gox-4z-2DP" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="Mlv-RP-d1K"/>
+                    <constraint firstItem="Gox-4z-2DP" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="-32" id="PMh-KN-pmr"/>
+                    <constraint firstItem="ojz-q8-2Oo" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="60" id="RF8-Pj-IL9"/>
+                    <constraint firstItem="3ar-SZ-zpk" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" symbolic="YES" id="UNY-bg-Fm5"/>
+                    <constraint firstItem="ykZ-8H-RVz" firstAttribute="centerX" secondItem="dN6-h5-456" secondAttribute="centerX" id="Uoz-5z-kbi"/>
+                    <constraint firstItem="oKe-4Y-pyk" firstAttribute="trailing" secondItem="ykZ-8H-RVz" secondAttribute="trailing" id="XPa-dt-Wrp"/>
+                    <constraint firstItem="c6B-af-crw" firstAttribute="top" secondItem="dN6-h5-456" secondAttribute="bottom" constant="18" id="Xrr-tU-s2e"/>
+                    <constraint firstAttribute="trailing" secondItem="Gox-4z-2DP" secondAttribute="trailing" constant="-5" id="ehP-bZ-cmB"/>
+                    <constraint firstItem="oKe-4Y-pyk" firstAttribute="trailing" secondItem="3ar-SZ-zpk" secondAttribute="trailing" id="o5z-lf-88m"/>
+                    <constraint firstItem="dN6-h5-456" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="34" id="pHE-sg-tZz"/>
+                    <constraint firstItem="oKe-4Y-pyk" firstAttribute="bottom" secondItem="3ar-SZ-zpk" secondAttribute="bottom" id="rSS-hL-uHv"/>
+                    <constraint firstItem="ojz-q8-2Oo" firstAttribute="top" secondItem="c6B-af-crw" secondAttribute="bottom" constant="24" id="tY6-oZ-voe"/>
+                    <constraint firstItem="ykZ-8H-RVz" firstAttribute="centerX" secondItem="Gox-4z-2DP" secondAttribute="centerX" id="xR0-6d-n9V"/>
+                    <constraint firstItem="dN6-h5-456" firstAttribute="centerX" secondItem="ojz-q8-2Oo" secondAttribute="centerX" id="xoC-kI-hYg"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="194" y="444"/>
+        </window>
+    </objects>
+</document>
