@@ -1,5 +1,11 @@
 # OC Build Wizard
 
+<p align="center">
+<img src="https://img.shields.io/github/stars/Mirone/Oc-Build-Wizard?style=flat&label=Stars&color=64748b" />
+<img src="https://img.shields.io/github/downloads/Mirone/Oc-Build-Wizard/total?style=flat&label=Downloads&color=64748b" />
+<img src="https://img.shields.io/github/v/release/Mirone/Oc-Build-Wizard?style=flat&label=Version&color=64748b" />
+</p>
+
 **OC Build Wizard** is a macOS application that automates the compilation of OpenCore directly from the official source code, also including the Btwise version (OpenCore_NO_ACPI), making it easier to generate the required files for Hackintosh usage.
 
 The application was designed to simplify the build process while maintaining compatibility with both the official OpenCore releases and the **OpenCore_NO_ACPI**.
